@@ -12,6 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./resources/style/icons-style.css">
     <link rel="stylesheet" href="./resources/style/style.css" />
   </head>
   <body>
@@ -23,52 +24,34 @@
         <ul>
           <li>
             <a class="home-nav" href="index.html"
-              ><img
-                id="home-img"
-                id="a"
-                src="./resources/img/home.svg"
-                alt=""
-                width="25"
-              />Home</a
+              ><span class="homeIcon"></span> Home</a
             >
           </li>
           <li>
             <a class="portfolio-nav" href="#portfolio-page"
-              ><img
-                id="portfolio-img"
-                src="./resources/img/project.svg"
-                alt=""
-                width="20"
-              />Portfolio</a
+              ><span class="projectIcon"></span>Portfolio</a
             >
           </li>
           <li>
             <a class="about-nav" href="#about-page"
-              ><img
-                id="about-img"
-                src="./resources/img/about.svg"
-                alt=""
-                width="25"
-              />About</a
+              ><span class="aboutIcon"></span>About</a
             >
           </li>
           <li>
             <a class="contact-nav" href="#contact-page" class="contact--btn btn"
-              ><img
-                id="contact-img"
-                src="./resources/img/contact.svg"
-                alt=""
-                width="20"
-              />Contact</a
+              ><span class="contactIcon"></span>Contact</a
             >
           </li>
         </ul>
       </nav>
       <div class="btn__container">
-        <button class="btn--theme" id="theme">
-          <img src="" alt="" id="theme--image" />
+        <button class="btn--theme" id="theme" aria-label="Theme button">
+          <span class="dark-mode-icon"></span>
         </button>
-        <button class="btn--menu" id="menu" aria-expanded="false"></button>
+        <button class="btn--menu" id="menu" aria-expanded="false" aria-label="Menu button">
+          <span class="menu-icon-open"></span>
+
+        </button>
       </div>
     </header>
     <main>
@@ -87,28 +70,14 @@
             <span>Front-end Developer</span>
             <div class="home__first-section__socialMedia socialMedia">
               <a href="https://github.com/AdarshKumar9002">
-                <img
-                id="gitHub-img"
-                  src="./resources/img/git-hub.svg"
-                  alt="Open GitHub Profile"
-                  width="20"
-                />
+                <span class="github" width="20"></span>
               </a>
               <a href="https://www.linkedin.com/in/adarsh-kumar-b3b16729b/">
-                <img
-                id="linkdin-img"
-                  src="./resources/img/linkdin.svg"
-                  alt="Open Linkdin Profile"
-                  width="20"
-                />
+                <span class="linkedin" width="20"></span>
+
               </a>
               <a href="https://twitter.com/adarashkumar3">
-                <img
-                id="twitter-img"
-                  src="./resources/img/twitter.svg"
-                  alt="Open X Profile"
-                  width="20"
-                />
+                <span class="twitter" width="20"></span>
               </a>
             </div>
             <div class="btn">
@@ -216,58 +185,37 @@
         <ul>
           <li>
             <a class="portfolio-nav" href="#portfolio-page"
-              ><img
-                src="./resources/img/project-alt.svg"
-                alt=""
-                width="20"
-              />Portfolio</a
+              ><span class="projectIcon" width="20"></span>Portfolio</a
             >
           </li>
           <li>
             <a class="about-nav" href="#about-page"
-              ><img
-                src="./resources/img/about-alt.svg"
-                alt=""
-                width="20"
-              />About</a
+              ><span class="aboutIcon" width="20"></span>About</a
             >
           </li>
           <li>
             <a class="contact-nav" href="#contact-page"
-              ><img
-                src="./resources/img/contact-alt.svg"
-                alt=""
-                width="20"
-              />Contact</a
+              ><span class="contactIcon" width="20"></span>Contact</a
             >
           </li>
         </ul>
       </nav>
       <div class="footer__socialMedia socialMedia">
         <a href="https://github.com/AdarshKumar9002">
-          <img
-            src="./resources/img/git-hub-alt.svg"
-            alt="Open GitHub Profile"
-            width="20"
-          />
+          <span class="github" width="20"></span>
+
         </a>
         <a href="https://www.linkedin.com/in/adarsh-kumar-b3b16729b/">
-          <img
-            src="./resources/img/linkdin-alt.svg"
-            alt="Open Linkdin Profile"
-            width="20"
-          />
+          <span class="linkedin" width="20"></span>
+
         </a>
         <a href="https://twitter.com/adarashkumar3">
-          <img
-            src="./resources/img/twitter-alt.svg"
-            alt="Open X Profile"
-            width="20"
-          />
+          <span class="twitter" width="20"></span>
         </a>
       </div>
     </footer>
 
+    <script type="module" src="./resources/script/icons-toggle.js"></script>
     <script type="module" src="./resources/script/script.js"></script>
   </body>
 </html>

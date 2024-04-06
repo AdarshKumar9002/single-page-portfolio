@@ -21,7 +21,9 @@
   --shadow-color: #2a08911a;
   --home-image-linear-gradient: linear-gradient(180deg, #b59efa, #2a0891);
   --svg-icon-fill-color: #fff;
-  --svg-icon-menuClose: #000;
+  --svg-icon-menuAndTheme: #fff;
+  --svg-icon-menuAndTheme-fixed-header:#000;
+  --svg-icon-socialMedia: #000;
 
   /* ====== Font and Typography ====== */
 
@@ -67,14 +69,19 @@
 
 /* ===== Theme ===== */
 .dark-mode {
+  --logo-color: #fff;
   --title-color: #d4d0e2;
   --text-color: #afacb9;
   --body-color: #131118;
+  --white-color:#000;
   --container-color: #1c1a23;
   --shadow-color: #09070d66;
   --svg-icon-fill-color: #000;
-  --svg-icon-menuClose: #fff;
+  --svg-icon-menuAndTheme: #000;
+  --svg-icon-menuAndTheme-fixed-header:#fff;
+  --svg-icon-socialMedia: #fff;
 }
+
 
 html {
   scroll-behavior: smooth;
@@ -149,8 +156,9 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-background-color: white;
+background-color: var(--white-color);
 }
+
 .h1--fixed {
   position: fixed;
   top: 0.2em;
@@ -302,6 +310,7 @@ nav a img {
   justify-content: center;
   align-items: center;
 }
+
 .home__first-section__socialMedia + div {
   margin-top: 2em;
   margin-bottom: 3em;
