@@ -22,7 +22,7 @@
   --home-image-linear-gradient: linear-gradient(180deg, #b59efa, #2a0891);
   --svg-icon-fill-color: #fff;
   --svg-icon-menuAndTheme: #fff;
-  --svg-icon-menuAndTheme-fixed-header:#000;
+  --svg-icon-menuAndTheme-fixed-header: #000;
   --svg-icon-socialMedia: #000;
 
   /* ====== Font and Typography ====== */
@@ -73,15 +73,14 @@
   --title-color: #d4d0e2;
   --text-color: #afacb9;
   --body-color: #131118;
-  --white-color:#000;
+  --white-color: #000;
   --container-color: #1c1a23;
   --shadow-color: #09070d66;
   --svg-icon-fill-color: #000;
   --svg-icon-menuAndTheme: #000;
-  --svg-icon-menuAndTheme-fixed-header:#fff;
+  --svg-icon-menuAndTheme-fixed-header: #fff;
   --svg-icon-socialMedia: #fff;
 }
-
 
 html {
   scroll-behavior: smooth;
@@ -115,6 +114,7 @@ h2 {
 h3 {
   font-size: var(--h3-font-size);
   color: var(--title-color);
+  text-align: center;
 }
 h4 {
   font-size: var(--h4-font-size);
@@ -156,7 +156,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-background-color: var(--white-color);
+  background-color: var(--white-color);
 }
 
 .h1--fixed {
@@ -228,19 +228,6 @@ nav a img {
   stroke: var(--svg-icon-menuClose);
 }
 
-/* ===== Services Related CSS ===== */
-
-.portfolio {
-  display: none;
-}
-.about {
-  display: none;
-}
-.contact {
-  display: none;
-}
-
-
 /* ===== Home ===== */
 .home {
   display: block;
@@ -257,12 +244,12 @@ nav a img {
   left: 0%;
   z-index: -1;
 }
-.home__first-section--image {
+.myImage {
   margin-top: 3em;
   display: grid;
   place-items: center;
 }
-.home__first-section--image > div {
+.myImage > div {
   width: 250px;
   height: 250px;
   background-color: var(--body-color);
@@ -271,7 +258,7 @@ nav a img {
   display: grid;
   place-items: center;
 }
-.home__first-section--image > div div {
+.myImage > div div {
   width: 180px;
   height: 180px;
   border: 10px solid var(--primary-color);
@@ -283,7 +270,7 @@ nav a img {
   align-items: center;
   background: var(--home-image-linear-gradient);
 }
-.home__first-section--image img {
+.myImage img {
   /* giving width because of the image. remove if it is creating issues */
   width: 10rem;
 }
@@ -364,8 +351,8 @@ nav a img {
   padding: 2em;
   display: grid;
   grid-template-areas:
-        "serviceTitle serviceTitle  closeBtn"
-        "services-list services-list services-list";
+    "serviceTitle serviceTitle  closeBtn"
+    "services-list services-list services-list";
   align-items: flex-end;
   box-shadow: 0px 0px 5px 5px var(--shadow-color);
 }
@@ -420,6 +407,85 @@ nav a img {
 .home__WantToTalk a {
   color: var(--white-color);
 }
+
+/* Portfolio section CSS */
+.portfolio {
+  display: none;
+}
+.portfolio h3 {
+  text-align: center;
+}
+.recentWork {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+}
+.recentWork__projects > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+}
+
+/* About section CSS */
+.about {
+  padding: 1em;
+  display: none;
+}
+.about .myImage {
+  margin: 1.5em;
+}
+.about__intro__bio {
+  text-align: center;
+}
+.about__intro__bio p {
+  margin: 1em 0;
+}
+.about__intro__bio + .btn {
+  width: fit-content;
+  margin: auto;
+}
+.about__intro__bio + .btn a {
+  color: #fff;
+}
+.about__mySkills {
+  margin: 1em 0;
+}
+.about__mySkills_skills {
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+  margin: 1em 0;
+  justify-content: center;
+}
+.about__mySkills_skills img {
+  width: 35px;
+}
+
+/* Contact section CSS */
+.contact {
+  padding: 1em;
+  display: none;
+}
+.contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+.contact form fieldset {
+  width: 100%;
+}
+input,
+textarea {
+  border: none;
+  height: 100%;
+  width: 100%;
+}
+.contact button {
+  margin: auto;
+}
+
 footer {
   background-color: var(--primary-color);
   margin-top: 3em;

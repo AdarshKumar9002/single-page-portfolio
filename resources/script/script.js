@@ -1,5 +1,13 @@
-import {iconsSvg} from './icons.js';
-import { MENU_ELEMENT, navigationMenu, NAV_ELEMENT, BODY_ELEMENT, onNavIcons, notOnNavIcons } from './menu.js';
+import { iconsSvg } from './icons.js';
+import {
+  MENU_ELEMENT,
+  navigationMenu,
+  NAV_ELEMENT,
+  BODY_ELEMENT,
+  onNavIcons,
+  notOnNavIcons,
+  closeNavigation,
+} from './menu.js';
 import { THEME_ELEMENT, themeToggle } from './theme.js';
 
 import {
@@ -24,10 +32,13 @@ const CONTACT_NAV_ELEMENTS = $.getElementsByClassName('contact-nav');
 
 MENU_ELEMENT.addEventListener('click', navigationMenu);
 
+if (NAV_ELEMENT.getAttribute('data-visible') === 'true') {
+  BODY_ELEMENT.addEventListener('click', closeNavigation);
+}
 // ===== Theme =====
 
 THEME_ELEMENT.addEventListener('click', themeToggle);
-THEME_ELEMENT.addEventListener('click', ()=> {
+THEME_ELEMENT.addEventListener('click', () => {
   const visibility = NAV_ELEMENT.getAttribute('data-visible');
 
   if (visibility === 'false') {
@@ -62,7 +73,7 @@ if (HOME_NAV_ELEMENTS.length > 0) {
 }
 
 if (PORTFOLIO_NAV_ELEMENTS.length > 0) {
-  for (let i = 0; i < PORTFOLIO_NAV_ELEMENTS.length; i+=1) {
+  for (let i = 0; i < PORTFOLIO_NAV_ELEMENTS.length; i += 1) {
     PORTFOLIO_NAV_ELEMENTS[i].addEventListener(
       'click',
       portfolioPageVisibility,
@@ -71,13 +82,13 @@ if (PORTFOLIO_NAV_ELEMENTS.length > 0) {
 }
 
 if (ABOUT_NAV_ELEMENTS.length > 0) {
-  for (let i = 0; i < ABOUT_NAV_ELEMENTS.length; i+=1) {
+  for (let i = 0; i < ABOUT_NAV_ELEMENTS.length; i += 1) {
     ABOUT_NAV_ELEMENTS[i].addEventListener('click', aboutPageVisibility);
   }
 }
 
 if (CONTACT_NAV_ELEMENTS.length > 0) {
-  for (let i = 0; i < CONTACT_NAV_ELEMENTS.length; i+=1) {
+  for (let i = 0; i < CONTACT_NAV_ELEMENTS.length; i += 1) {
     CONTACT_NAV_ELEMENTS[i].addEventListener('click', contactPageVisibility);
   }
 }

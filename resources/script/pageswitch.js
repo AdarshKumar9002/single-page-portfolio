@@ -27,6 +27,7 @@ const homePageVisibility = () => {
     ABOUT_PAGE_ELEMENT,
     CONTACT_PAGE_ELEMENT,
   );
+  document.querySelector('header').classList.remove('fixed-header');
 };
 const portfolioPageVisibility = () => {
   pageVisibilityShown(PORTFOLIO_PAGE_ELEMENT);
@@ -35,6 +36,7 @@ const portfolioPageVisibility = () => {
     ABOUT_PAGE_ELEMENT,
     CONTACT_PAGE_ELEMENT,
   );
+  document.querySelector('header').classList.add('fixed-header');
 };
 const aboutPageVisibility = () => {
   pageVisibilityShown(ABOUT_PAGE_ELEMENT);
@@ -43,6 +45,7 @@ const aboutPageVisibility = () => {
     PORTFOLIO_PAGE_ELEMENT,
     CONTACT_PAGE_ELEMENT,
   );
+  document.querySelector('header').classList.add('fixed-header');
 };
 const contactPageVisibility = () => {
   pageVisibilityShown(CONTACT_PAGE_ELEMENT);
@@ -51,22 +54,10 @@ const contactPageVisibility = () => {
     PORTFOLIO_PAGE_ELEMENT,
     ABOUT_PAGE_ELEMENT,
   );
+  document.querySelector('header').classList.add('fixed-header');
 };
 
-// const pageToggle = (event) => {
-//     const clickedElement = event.currentTarget;
-//     console.log(clickedElement);
 
-//     if (clickedElement === HOME_PAGE_ELEMENT) {
-//       homePageVisibility();
-//     } else if (clickedElement === PORTFOLIO_PAGE_ELEMENT) {
-//       portfolioPageVisibility();
-//     } else if (clickedElement === ABOUT_PAGE_ELEMENT) {
-//       aboutPageVisibility();
-//     } else if (clickedElement === CONTACT_PAGE_ELEMENT) {
-//       contactPageVisibility();
-//     }
-//   };
 
 export {
   HOME_PAGE_ELEMENT,

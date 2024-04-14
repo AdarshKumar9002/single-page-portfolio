@@ -17,6 +17,9 @@
 .menuAndTheme-icons {
   fill: var(--icon-colors-primary);
 }
+.fixed-header .menuAndTheme-icons {
+  fill: var(--icon-colors-secondry);
+}
 header [data-visible="true"] .menuAndTheme-icons {
   fill: var(--icon-colors-secondry);
 }
